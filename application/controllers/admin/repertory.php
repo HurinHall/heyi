@@ -1,14 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Login extends CI_Controller {
+class Repertory extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
-	 * 		http://example.com/login
+	 * 		http://example.com/admin/repertory
 	 *	- or -  
-	 * 		http://example.com/login/index
+	 * 		http://example.com/admin/repertory/index
 	 *	- or -
 	 * Since this controller is set as the default controller in 
 	 * config/routes.php, it's displayed at http://example.com/
@@ -21,38 +21,37 @@ class Login extends CI_Controller {
 	 public function __construct(){
     	parent::__construct();
     	$this->load->helper('url');
-    	$this->load->model('login_model');
+    	$this->load->model('admin_repertory_model');
     	$this->load->library('session');
   	}
   	
 	public function index()
 	{
 		$title="title";
-		$data['title'] = $this->login_model->example($title);
-		$this->load->view('login',$data);
+		$data['title'] = $this->admin_repertory_model->example($title);
+		$this->load->view('admin_repertory',$data);
 	}
 	
-	//http://example.com/login/auth
-	public function auth(){
+	//http://example.com/admin/repertory/page/{page}
+	public function page($page=1){
 		$user = $this->input->post('username');
 		$pass = $this->input->post('password');
 		//$this->input->get('name'); see ->user_guide/libraries/input.html
-		if($this->login_model->login($user,$pass)){
-			//how to record session ->user_guide/libraries/sessions.html
-			//redirect('location','reload');
-		}else{
-			//redirect('location','reload');
-		}
+		//$this->load->view('page',$data); page in view folder
 	}
 	
-	//http://example.com/login/logout
-	public function logout(){
-		//remove session
-		//redirect('location','reload');
+	//http://example.com/admin/account/update/
+	public function update(){
+		
 	}
 	
-	//http://example.com/login/forget
-	public function forget(){
+	//http://example.com/admin/account/delete/
+	public function delete(){
+		
+	}
+	
+	//http://example.com/admin/account/add
+	public function add(){
 		
 	}
 }

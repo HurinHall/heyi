@@ -1,14 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Pay extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
-	 * 		http://example.com/home
+	 * 		http://example.com/pay
 	 *	- or -  
-	 * 		http://example.com/home/index
+	 * 		http://example.com/pay/index
 	 *	- or -
 	 * Since this controller is set as the default controller in 
 	 * config/routes.php, it's displayed at http://example.com/
@@ -21,14 +21,15 @@ class Home extends CI_Controller {
 	 public function __construct(){
     	parent::__construct();
     	$this->load->helper('url');
-    	$this->load->model('home_model');
+    	$this->load->model('pay_model');
     	$this->load->library('session');
   	}
   	
 	public function index()
 	{
 		$title="title";
-		$data['title'] = $this->home_model->example($title);
-		$this->load->view('home',$data);
+		$data['title'] = $this->pay_model->example($title);
+		$this->load->view('pay',$data);
 	}
+	
 }

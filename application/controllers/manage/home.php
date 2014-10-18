@@ -6,9 +6,9 @@ class Home extends CI_Controller {
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
-	 * 		http://example.com/home
+	 * 		http://example.com/manage/
 	 *	- or -  
-	 * 		http://example.com/home/index
+	 * 		http://example.com/manage/home
 	 *	- or -
 	 * Since this controller is set as the default controller in 
 	 * config/routes.php, it's displayed at http://example.com/
@@ -21,14 +21,14 @@ class Home extends CI_Controller {
 	 public function __construct(){
     	parent::__construct();
     	$this->load->helper('url');
-    	$this->load->model('home_model');
+    	$this->load->model('manage_home_model');
     	$this->load->library('session');
   	}
   	
 	public function index()
 	{
 		$title="title";
-		$data['title'] = $this->home_model->example($title);
-		$this->load->view('home',$data);
+		$data['title'] = $this->manage_home_model->example($title);
+		$this->load->view('manage_home',$data);
 	}
 }

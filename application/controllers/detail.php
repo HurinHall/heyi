@@ -1,14 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Detail extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
-	 * 		http://example.com/home
+	 * 		http://example.com/detail
 	 *	- or -  
-	 * 		http://example.com/home/index
+	 * 		http://example.com/detail/index
 	 *	- or -
 	 * Since this controller is set as the default controller in 
 	 * config/routes.php, it's displayed at http://example.com/
@@ -21,14 +21,23 @@ class Home extends CI_Controller {
 	 public function __construct(){
     	parent::__construct();
     	$this->load->helper('url');
-    	$this->load->model('home_model');
+    	$this->load->model('detail_model');
     	$this->load->library('session');
   	}
   	
 	public function index()
 	{
+		$id = $this->input->get('id');
 		$title="title";
-		$data['title'] = $this->home_model->example($title);
-		$this->load->view('home',$data);
+		$data['title'] = $this->detail_model->example($title);
+		$this->load->view('detail',$data);
 	}
+
+	//http://example.com/detail/addtocart
+	public function addtocart(){
+		$id=$this->input->post('id');
+		$num=$this->input->post('num');
+		//$this->input->get('name'); see ->user_guide/libraries/input.html
+		//$this->load->view('page',$data); page in view folder
+	}	
 }

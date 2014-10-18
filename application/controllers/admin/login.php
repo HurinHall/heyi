@@ -6,9 +6,9 @@ class Login extends CI_Controller {
 	 * Index Page for this controller.
 	 *
 	 * Maps to the following URL
-	 * 		http://example.com/login
+	 * 		http://example.com/admin/login
 	 *	- or -  
-	 * 		http://example.com/login/index
+	 * 		http://example.com/admin/login/index
 	 *	- or -
 	 * Since this controller is set as the default controller in 
 	 * config/routes.php, it's displayed at http://example.com/
@@ -21,18 +21,18 @@ class Login extends CI_Controller {
 	 public function __construct(){
     	parent::__construct();
     	$this->load->helper('url');
-    	$this->load->model('login_model');
+    	$this->load->model('admin_login_model');
     	$this->load->library('session');
   	}
   	
 	public function index()
 	{
 		$title="title";
-		$data['title'] = $this->login_model->example($title);
-		$this->load->view('login',$data);
+		$data['title'] = $this->admin_login_model->example($title);
+		$this->load->view('admin_login',$data);
 	}
 	
-	//http://example.com/login/auth
+	//http://example.com/admin/login/auth
 	public function auth(){
 		$user = $this->input->post('username');
 		$pass = $this->input->post('password');
@@ -45,14 +45,9 @@ class Login extends CI_Controller {
 		}
 	}
 	
-	//http://example.com/login/logout
+	//http://example.com/admin/login/logout
 	public function logout(){
 		//remove session
 		//redirect('location','reload');
-	}
-	
-	//http://example.com/login/forget
-	public function forget(){
-		
 	}
 }
