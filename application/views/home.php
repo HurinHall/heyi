@@ -12,6 +12,8 @@
 <br />
 <?=$title;?>
 <br />
-<a href="<?=site_url('login/index')?>">Sign in</a>
+<a href="<?=site_url('login/auth')?>">Sign in</a>
+<br />
+<a href="<?=site_url('register/add')?>">Sign up</a>
 </body>
 </html>

@@ -3,27 +3,56 @@
 class login_model extends CI_Model{
 
 	public function __construct(){
+	    $this->load->library('session');
 		$this->load->database();
 	}
 
-	public function example($text){
-		//$query = $this->db->query("SQL sentence");
-		//$query->result() 
-		//$query->num_rows()
-		/*
-			foreach($query->result()  as $item){
-				$item->attribute;
-			}
-		*/
-		return $text." in model";
+	/**
+	 * 添加用户session数据,设置用户在线状态
+	 * @param string $username
+	 */
+	function login($username)
+	{
+	    $data = array('username'=>$username, 'logged_in'=>TRUE);
+	    $this->session->set_userdata($data);//添加session数据
 	}
 	
-	public function login($user,$pass){
-		//$query = $this->db->query("SQL sentence");
-		//$query->result() 
-		//$query->num_rows()
-		//$password use md5 encryption
-		//return true or false
-		$res=$this->db->where($user,$pass)->get('user');
+	/**
+	 * 通过用户名获得用户记录
+	 * @param string $username
+	 */
+	function get_by_username($username)
+	{
+	    $this->db->where('username', $username);
+	    $query = $this->db->get('user');
+	    //return $query->row();                            //不判断获得什么直接返回
+	    if ($query->num_rows() == 1)
+	    {
+	        return $query->row();
+	    }
+	    else
+	    {
+	        return FALSE;
+	    }
 	}
+	 
+	/**
+	 * 用户名不存在时,返回false
+	 * 用户名存在时，验证密码是否正确
+	 */
+	function password_check($username, $password)
+	{
+	   
+	    if($user=$this->get_by_username($username))
+	    {
+	        
+	        $salt=$user->salt;	        
+	        $password = md5($salt.$password);
+	        
+	        return $user->password == $password ? TRUE : FALSE;
+	    }
+	    return FALSE;//当用户名不存在时
+	}
+	
+	
 }
