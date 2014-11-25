@@ -24,5 +24,6 @@ class login_model extends CI_Model{
 		//$query->num_rows()
 		//$password use md5 encryption
 		//return true or false
+		$res=$this->db->where($user,$pass)->get('user');
 	}
 }

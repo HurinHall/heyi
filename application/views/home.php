@@ -11,5 +11,7 @@
 <?=base_url('/images');?>
 <br />
 <?=$title;?>
+<br />
+<a href="<?=site_url('login/index')?>">Signin</a>
 </body>
 </html>

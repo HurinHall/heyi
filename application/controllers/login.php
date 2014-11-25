@@ -34,15 +34,39 @@ class Login extends CI_Controller {
 	
 	//http://example.com/login/auth
 	public function auth(){
-		$user = $this->input->post('username');
-		$pass = $this->input->post('password');
+	    
+	    $this->load->library('form_validation');
+	    $this->form_validation->set_rules('username', 'Username', 'required');
+	    $this->form_validation->set_rules('password', 'Password', 'required');
+	    
+	    $bool=$this->form_validation->run();
+	    if($bool){
+	      
+	        //get username and password from login.php view
+	        $user = $this->input->post('username');
+	        $pass = $this->input->post('password');
+	        
+	        //call login model to check	        	    
+	        if($this->login_model->login($user,$pass)){
+	            
+	        }else{
+	            $error="Logon failure:unknown user name or bad password.";
+	            $data['error'] = $error;
+	            $this->load->view('login',$data);
+	        }
+	        
+	    }else{
+	        //display input error info
+	        $this->load->view('login');
+	    }
+		
 		//$this->input->get('name'); see ->user_guide/libraries/input.html
-		if($this->login_model->login($user,$pass)){
+		/* if($this->login_model->login($user,$pass)){
 			//how to record session ->user_guide/libraries/sessions.html
 			//redirect('location','reload');
 		}else{
 			//redirect('location','reload');
-		}
+		} */
 	}
 	
 	//http://example.com/login/logout
