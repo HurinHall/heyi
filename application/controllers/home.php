@@ -28,7 +28,17 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$title="title";
-		$data['title'] = $this->home_model->example($title);
+		if($this->session->userdata('logged_in') == TRUE){
+		    $data = array(
+		        'logined'=>TRUE,
+		        'username'=>$this->session->userdata('username'),		        
+		    );
+		}else{
+		    $data = array(
+		        'logined'=>FALSE,
+		    );
+		}
+		
 		$this->load->view('home',$data);
 	}
 }

@@ -17,6 +17,7 @@
                 <div><input type="submit" value="Login"></div>
              
         </form>
+        <span style="display: inline-block; float: right;"><a href="<?=site_url('register/add')?>">Sign up</a></span>
     </fieldset>
     <?php echo validation_errors();?>
 </body>

@@ -38,8 +38,8 @@ class Login extends CI_Controller {
 	    }else{
 	        //注册session,设定登录状态
 	        $this->login_model->login($this->_username);
-	        $data['message'] = $this->session->userdata('username').' You are logged in! Now take a look at the '.anchor('account/dashboard', 'Dashboard');
-	        $this->load->view('home', $data);
+	        $data['message'] = $this->session->userdata('username').' You are logged in! Now take a look at the '.anchor('home/index', 'home');
+	        redirect('home/index',reload);
 	    }
 	    
 	    
@@ -49,11 +49,11 @@ class Login extends CI_Controller {
 	public function logout(){
 		//remove session
 		//redirect('location','reload');
-	    if ($this->logged_in() === TRUE)
+	    if ($this->session->userdata('logged_in') == TRUE)
 	    {
 	        $this->session->sess_destroy();//销毁所有session的数据
 	    }
-	    $this->load->view('home');
+	    redirect('home/index',reload);
 	}
 	
 	//http://example.com/login/forget
