@@ -1,0 +1,101 @@
+      .bg{
+			margin-top: -10px;
+			margin-left: 0px;
+			margin-right: 0px;
+			position:absolute; 
+			width:100%; 
+			height:100%; 
+			z-index:-1
+		}
+      #main {
+	      padding-top: 10px;
+      }
+      .nav_background {
+	      background-color: rgba(86,114,172,0.96);
+	      height: 39px;
+      }
+      .span_style {
+	      color: #449bbb
+      }
+      .carousel_size{
+	      height: 320px;
+	      
+      }
+      .side_btn_style {
+	      color: silver;
+	      height: 80px;
+	      width: 210px;
+      }
+      .carousel_bgd {
+	      background-color: rgba(86,114,172,0.96);
+      }
+      .td_font_color {
+	      color:#138df7
+      }
+      .sitemap_bgd {
+	      background-image: url("../img/sitemap_bgd.png");
+      }
+      .side_weather {
+	      background-image: url("../img/side_weather.png");
+	      background-size: cover;
+	      background-repeat: no-repeat;
+	      z-index: -1;
+	      height: 134px;
+	      width: 210px;
+      }
+      .WeatherInfo {
+	      margin-top:45px;
+		  margin-left:10px;
+      }
+      .side_usefulLink {
+	      background-image: url("../img/side_usefulLink.png");
+	      background-size: cover;
+	      background-repeat: no-repeat;
+	      z-index: -1;
+	      height: 134px;
+	      width: 210px;
+      }
+      .UsefulLinkInfo {
+	      margin-top:50px;
+		  margin-left:15px;
+      }
+      .sitemap_btn {
+	      width: 120px;
+	      height: 40px;
+      }
+      .sitemap_item {
+	      width: 240px;
+	      
+      }
+      .dd a:hover {
+      	  color:#fff
+      }
+      .dd a:link {
+      	  color:#9CCCDC
+      }
+      .siteBotton{
+			color: #9CCCDC;
+			font-size:12pt;
+			font-weight:bold;
+			font-family: Calibri, serif;
+	  }
+	  .bottom_category_size {
+	      width: 150px;
+	      height: 50px;
+      }
+      .nav_bar_bgd {
+	    background-color: rgb(57,107,179);
+    }
+    .nav_bar_font {
+	    color: #00CCFF;
+    }
+    @media (min-width:990px){
+        #nav_bar_width {
+	        width: 938px;
+        }
+    }
+    @media (min-width:1200px){
+        #nav_bar_width {
+	        width: 1090px;
+        }
+    }

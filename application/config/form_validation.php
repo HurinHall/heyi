@@ -28,6 +28,20 @@ $config = array(
         )
     ),
     
+    'changePwd'=>array(
+        array(
+            'field'=>'oldpass',
+            'label'=>'旧密码',
+            'rules'=>'trim|required|xss_clean|callback_password_auth'
+        ),
+        array(
+            'field'=>'newpass',
+            'label'=>'新密码',
+            'rules'=>'trim|required|min_length[4]|max_length[25]|matches[newpassconf]|xss_clean'
+        )
+        
+    ),
+    
     'login'=>array(
         array(
                  'field'=>'username',

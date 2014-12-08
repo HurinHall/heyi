@@ -6,7 +6,7 @@ class register_model extends CI_Model{
 		$this->load->database();
 	}
 
-	function add_user($username, $password,$address,$phone, $email){
+	function add_user($username, $password,$name ,$address,$phone, $email){
 	    $salt = substr(uniqid(rand()), -8);
 	    $password = md5($salt.$password);
 	    $data = array(
@@ -22,6 +22,7 @@ class register_model extends CI_Model{
 	        $id=$this->db->insert_id();
 	        $data2 = array(
 	            'id'=>$id,
+	            'name'=>$name,
 	            'address'=>$address,
 	            'phone'=>$phone,
 	            'email'=>$email,

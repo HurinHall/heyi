@@ -34,11 +34,11 @@ class Register extends CI_Controller {
 	        $username = $this->input->post('username');
 	        
 	        $password = $this->input->post('password');
-	        
+	        $name = $this->input->post('name');
 	        $address = $this->input->post('address');
 	        $phone = $this->input->post('phone');
 	        $email = $this->input->post('email');
-	        if($this->register_model->add_user($username, $password,$address,$phone, $email)){
+	        if($this->register_model->add_user($username, $password,$name, $address,$phone, $email)){
 	            $data['message'] = "The user account has now been created! You can go ".anchor('login/auth', 'here').'.';
 	        }else{
                 $data['message'] = "There was a problem when adding your account. You can register ".anchor('register/add', 'here').' again.';

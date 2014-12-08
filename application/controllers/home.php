@@ -27,7 +27,6 @@ class Home extends CI_Controller {
   	
 	public function index()
 	{
-		$title="title";
 		if($this->session->userdata('logged_in') == TRUE){
 		    $data = array(
 		        'logined'=>TRUE,

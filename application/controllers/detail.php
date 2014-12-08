@@ -23,21 +23,37 @@ class Detail extends CI_Controller {
     	$this->load->helper('url');
     	$this->load->model('detail_model');
     	$this->load->library('session');
+    	$this->load->library('cart');
   	}
   	
 	public function index()
 	{
-		$id = $this->input->get('id');
-		$title="title";
-		$data['title'] = $this->detail_model->example($title);
+	    if($this->session->userdata('logged_in') == TRUE){
+	        $data = array(
+	            'logined'=>TRUE,
+	            'username'=>$this->session->userdata('username'),
+	        );
+	    }else{
+	        $data = array(
+	            'logined'=>FALSE,
+	        );
+	    }
 		$this->load->view('detail',$data);
 	}
 
 	//http://example.com/detail/addtocart
 	public function addtocart(){
-		$id=$this->input->post('id');
-		$num=$this->input->post('num');
-		//$this->input->get('name'); see ->user_guide/libraries/input.html
-		//$this->load->view('page',$data); page in view folder
+	    
+	    $data = array(
+	        'id'      => 'heyi_1',
+	        'qty'     => 1,
+	        'price'   => 173.00,
+	        'name'    => 'Steve Jobs',
+	        'options' => array('作者' => 'Walter Isaacon')
+	    );
+	    
+	    $this->cart->insert($data);
+
+	    redirect('home/index',reload);
 	}	
 }

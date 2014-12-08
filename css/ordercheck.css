@@ -1,0 +1,368 @@
+/* CSS Document */
+@charset "gb2312";
+body, ul, li, p, img, h3, form, input, select, dt, dd, dl {
+    margin: 0;
+    padding: 0;
+	font-size:16px;
+	font-family:Î¢ÈíÑÅºÚ;
+	margin: 0 auto;
+}
+
+
+
+#page {
+    margin: 0 auto;
+	overflow:hidden;
+	display: block;
+	}
+
+img {
+    border: 0 none;
+	}
+
+
+ul, li {
+    list-style: none outside none;
+	}
+	
+#bar{
+	height:40px;
+	width: 726px;
+	position:relative;
+	margin: 0 auto;
+	}
+	
+.correct{
+	position:absolute;
+	}
+	
+.top1{
+	position:relative;
+	height:40px;
+	}
+	
+#content{
+	width: 680px;
+	position:relative;
+	margin: 0 auto;
+	}
+	
+.order1{
+	position:relative;
+	top:20px;
+	height:173px;
+	}
+	
+.check1{
+	position:absolute;
+	left:30px;
+	}
+	
+.c1{
+	position:relative;
+	width:554px;
+	left: 54px;
+	height:153px;
+	border-color:#999999;
+	}
+	
+.book1{
+	position:absolute;
+	top:7px;
+	left:23px;
+	}
+
+.b1_num{
+	position:absolute;
+	font-size:20px;
+	left:150px;
+	}	
+
+.b1_tit{
+	position:absolute;
+	font-size:15px;
+	left:150px;
+	top:25px;
+	color:#2F3A97;
+	}
+	
+.b1_author{
+	position:absolute;
+	font-size:15px;
+	left:150px;
+	top:67px;
+	}
+	
+.b1_price{
+	position:absolute;
+	font-size:20px;
+	left:148px;
+	color:#890018;
+	top:90px;
+	}
+	
+.b1_ammount{
+	position:absolute;
+	font-size:20px;
+	left:150px;
+	top:120px;
+	}
+
+
+
+
+
+
+
+
+.order2{
+	position:relative;
+	top:20px;
+	height:173px;
+	}
+	
+.check2{
+	position:absolute;
+	left:30px;
+	}
+	
+.c2{
+	position:relative;
+	width:554px;
+	left: 54px;
+	height:153px;
+	border-color:#999999;
+	}
+	
+.book2{
+	position:absolute;
+	top:7px;
+	left:23px;
+	}
+
+.b2_num{
+	position:absolute;
+	font-size:20px;
+	left:150px;
+	}	
+
+.b2_tit{
+	position:absolute;
+	font-size:15px;
+	left:150px;
+	top:25px;
+	color:#2F3A97;
+	}
+	
+.b2_author{
+	position:absolute;
+	font-size:15px;
+	left:150px;
+	top:67px;
+	}
+	
+.b2_price{
+	position:absolute;
+	font-size:20px;
+	left:148px;
+	color:#890018;
+	top:90px;
+	}
+	
+.b2_ammount{
+	position:absolute;
+	font-size:20px;
+	left:150px;
+	top:120px;
+	}
+	
+.order3{
+	position:relative;
+	top:20px;
+	height:173px;
+	}
+	
+.check3{
+	position:absolute;
+	left:30px;
+	}
+	
+.c3{
+	position:relative;
+	width:554px;
+	left: 54px;
+	height:153px;
+	border-color:#999999;
+	}
+	
+.book3{
+	position:absolute;
+	top:7px;
+	left:23px;
+	}
+
+.b3_num{
+	position:absolute;
+	font-size:20px;
+	left:150px;
+	}	
+
+.b3_tit{
+	position:absolute;
+	font-size:15px;
+	left:150px;
+	top:25px;
+	color:#2F3A97;
+	}
+	
+.b3_author{
+	position:absolute;
+	font-size:15px;
+	left:150px;
+	top:67px;
+	}
+	
+.b3_price{
+	position:absolute;
+	font-size:20px;
+	left:148px;
+	color:#890018;
+	top:90px;
+	}
+	
+.b3_ammount{
+	position:absolute;
+	font-size:20px;
+	left:150px;
+	top:120px;
+	}
+	
+.info{
+	position:relative;
+	top:20px;
+	font-size:13px;
+	}
+	
+.n{
+	position:absolute;
+	right:50px;
+	top:3px;
+	}
+.n2{
+	position:absolute;
+	right:50px;
+	top:24px;
+	}
+	
+.acc{
+	position:absolute;
+	height:50px;
+	width:270px;
+	right:66px;
+	top:7px;
+	}
+	
+	
+.jisong{
+	position:absolute;
+	left:48px;
+	}
+	
+.result{
+	position:relative;
+	top:110px;
+	}
+	
+.cancel{
+	position:absolute;
+	left:49px;
+	}
+	
+.submit{
+	position:absolute;
+	right:66px;
+	}
+	
+.add{
+	position:relative;
+	height:100px;
+	}
+	
+.toBar{
+	position:absolute;
+	height:66px;
+	width:557px;
+	top:30px;
+	left:55px;
+	}
+	
+.toOld{
+	height:33px;
+	}
+	
+.toNew{
+	height:33px;
+	}
+
+.old_left{
+	position:relative;
+	width:107px;
+	background-color:#CCCCCC;
+	height:33px;
+	border-color:#FFFFFF;
+	border-right-style:solid;
+	border-width:2px;
+	}
+	
+.old_right{
+	position:absolute;
+	right:0px;
+	width:449px;
+	height:33px;
+	top:0px;
+	background-color:#CCCCCC;
+	}
+	
+.new_left{
+	position:relative;
+	width:107px;
+	height:33px;
+	background-color:#CCCCCC;
+	}
+	
+.new_right{
+	position:absolute;
+	right:0px;
+	width:449px;
+	top:33px;
+	height:33px;
+	background-color:#CCCCCC;
+	}
+	
+.old_word1{
+	position:absolute;
+	top:5px;
+	left:10px;
+	color:#FFFFFF;
+	}
+	
+.old_word2{
+	position:absolute;
+	top:5px;
+	left:20px;
+	color:#FFFFFF;
+	}
+	
+.new_word1{
+	position:absolute;
+	top:5px;
+	left:10px;
+	color:#FFFFFF;
+	}
+	
+.new_word2{
+	position:absolute;
+	top:5px;
+	left:20px;
+	color:#FFFFFF;
+	}

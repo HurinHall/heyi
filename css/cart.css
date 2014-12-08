@@ -1,0 +1,360 @@
+/* CSS Document */
+@charset "gb2312";
+body, ul, li, p, img, h3, form, input, select, dt, dd, dl {
+    margin: 0;
+    padding: 0;
+	font-size:16px;
+	font-family:Î¢ÈíÑÅºÚ;
+	margin: 0 auto;
+}
+
+
+
+#page {
+    margin: 0 auto;
+	overflow:hidden;
+	display: block;
+	}
+
+img {
+    border: 0 none;
+	}
+
+
+ul, li {
+    list-style: none outside none;
+	}
+	
+#bar{
+	height:240px;
+	width: 726px;
+	position:relative;
+	margin: 0 auto;
+	}
+	
+.cart{
+	position:absolute;
+	top:30px;
+	left:0px;
+	}
+	
+.all{
+	position:absolute;
+	top:200px;
+	left:8px;
+	}
+	
+.cancel{
+	position:absolute;
+	right:114px;
+	top:2px;
+	}
+	
+.pay{
+	position:absolute;
+	right:0px;
+	top:2px;
+	}
+	
+.full_mess{
+	position:relative;
+	height:40px;
+	}
+	
+.l1{
+	position:absolute;
+	top:18px;
+	left:180px;
+	}
+	
+.l2{
+	position:absolute;
+	top:18px;
+	left:360px;
+	}
+	
+.l3{
+	position:absolute;
+	top:18px;
+	left:480px;
+	}
+	
+.l4{
+	position:absolute;
+	top:18px;
+	left:630px;
+	}
+	
+.check{
+	position:absolute;
+	top:24px;
+	left:30px;
+	}
+	
+.correct{
+	position:absolute;
+	}
+	
+.top1{
+	position:relative;
+	height:240px;
+	}
+	
+#content{
+	width: 750px;
+	position:relative;
+	margin: 0 auto;
+	}
+	
+.order1{
+	position:relative;
+	top:20px;
+	height:173px;
+	border-color:#999999;
+	}
+	
+.check1{
+	position:absolute;
+	left:30px;
+	
+	}
+	
+.c1{
+	position:relative;
+	width:670px;
+	left: 54px;
+	border-color:#999999;
+	height:153px;
+	}
+	
+.book1{
+	position:absolute;
+	top:7px;
+	left:23px;
+	}
+
+.b1_price{
+	position:absolute;
+	font-size:15px;
+	left:300px;
+	top:33px;
+	}	
+
+.b1_tit{
+	position:absolute;
+	font-size:22px;
+	left:120px;
+	top:15px;
+	color:#2F3A97;
+	}
+	
+.b1_am{
+	position:absolute;
+	font-size:15px;
+	left:567px;
+	top:33px;
+	}
+	
+
+	
+.b1_author{
+	position:absolute;
+	font-size:17px;
+	left:120px;
+	top:55px;
+	}
+
+
+
+
+
+
+
+
+.order2{
+	position:relative;
+	top:20px;
+	height:173px;
+	}
+	
+.check2{
+	position:absolute;
+	left:30px;
+	}
+	
+.c2{
+	position:relative;
+	width:670px;
+	left: 54px;
+	height:153px;
+	border-color:#999999;
+	}
+	
+.book2{
+	position:absolute;
+	top:7px;
+	left:23px;
+	}
+
+.b2_price{
+	position:absolute;
+	font-size:15px;
+	left:300px;
+	top:33px;
+	}	
+
+.b2_tit{
+	position:absolute;
+	font-size:22px;
+	left:120px;
+	top:15px;
+	color:#2F3A97;
+	}
+	
+.b2_am{
+	position:absolute;
+	font-size:15px;
+	left:567px;
+	top:33px;
+	}
+	
+
+	
+.b2_author{
+	position:absolute;
+	font-size:17px;
+	left:120px;
+	top:55px;
+	}
+	
+.order3{
+	position:relative;
+	top:20px;
+	height:173px;
+	}
+	
+.check3{
+	position:absolute;
+	left:30px;
+	}
+	
+.c3{
+	position:relative;
+	width:670px;
+	left: 54px;
+	height:153px;
+	border-color:#999999;
+	}
+	
+.book3{
+	position:absolute;
+	top:7px;
+	left:23px;
+	}
+
+.b3_price{
+	position:absolute;
+	font-size:15px;
+	left:300px;
+	top:33px;
+	}	
+
+.b3_tit{
+	position:absolute;
+	font-size:22px;
+	left:120px;
+	top:15px;
+	color:#2F3A97;
+	}
+	
+.b3_am{
+	position:absolute;
+	font-size:15px;
+	left:567px;
+	top:33px;
+	}
+	
+
+	
+.b3_author{
+	position:absolute;
+	font-size:17px;
+	left:120px;
+	top:55px;
+	}
+	
+.info{
+	position:relative;
+	top:20px;
+	font-size:13px;
+	}
+	
+.n{
+	position:absolute;
+	right:22px;
+	top:3px;
+	}
+	
+
+	
+.add{
+	position:relative;
+	top:57px;
+	}
+	
+.add_pic{
+	position:absolute;
+	right:65px;
+	}
+	
+.jisong{
+	position:absolute;
+	left:48px;
+	}
+	
+.result{
+	position:relative;
+	top:110px;
+	}
+	
+.back{
+	position:absolute;
+	left:156px;
+	top:-70px;
+	
+	}
+	
+.delete{
+	position:absolute;
+	left:26px;
+	top:-70px;
+	height:36px;
+	width:107px;
+	}
+	
+.submit{
+	position:absolute;
+	right:20px;
+	top:-70px;
+	}
+	
+.add_min{
+	position:absolute;
+	top:33px;
+	left:410px;
+	}
+	
+.c1{
+	border-solor:#999999;
+	}
+	
+.plus{
+	position:absolute;
+	top:0px;
+	left:45px;
+	}
+	
+.tb{
+	position:absolute;
+	left:15px;
+	}

@@ -1,0 +1,331 @@
+/* CSS Document */
+@charset "gb2312";
+body, ul, li, p, img, h3, form, input, select, dt, dd, dl {
+    margin: 0;
+    padding: 0;
+	font-size:16px;
+	font-family:Î¢ÈíÑÅºÚ;
+	margin: 0 auto;
+}
+
+
+img {
+    border: 0 none;
+	}
+
+
+ul, li {
+    list-style: none outside none;
+	}
+	
+.bgimage{
+	position:absolute;
+	}
+	
+.navi{
+	position:absolute;
+	width:360px;
+	height:619px;
+	left:0px;
+	}
+	
+.naviBg{
+	background-color:#000000;
+	opacity:0.5;
+	position:absolute;
+	width:360px;
+	height:619px;
+	}
+	
+.bar1{
+	position:absolute;
+	width:360px;
+	height:50px;
+	top:180px;
+	}
+
+.word{
+	position:absolute;
+	left:35px;
+	top:5px;
+	height:20px;
+	font-size:30px;
+	color:#FFFFFF;
+	}
+	
+.bar2{
+	position:absolute;
+	width:360px;
+	height:50px;
+	top:230px;
+	}
+
+.word{
+	position:absolute;
+	left:35px;
+	top:5px;
+	height:20px;
+	font-size:30px;
+	color:#FFFFFF;
+	}
+	
+.bar3{
+	position:absolute;
+	width:360px;
+	height:50px;
+	top:280px;
+	}
+
+.word{
+	position:absolute;
+	left:35px;
+	top:5px;
+	height:20px;
+	font-size:30px;
+	color:#FFFFFF;
+	}
+
+.char{
+	position:absolute;
+	left:35px;
+	top:18px;
+	}
+	
+.bar1:hover{
+	background-color:#890018;
+	}
+	
+.bar2:hover{
+	background-color:#890018;
+	}
+	
+.bar3:hover{
+	background-color:#890018;
+	}
+	
+.content1{
+	position:absolute;
+	width:660px;
+	height:619px;
+	left:360px;
+	font-size:30px;
+	color:#FFFFFF;
+	}
+	
+.c1_bg{
+	background-color:#000000;
+	opacity:0.5;
+	position:absolute;
+	width:660px;
+	height:619px;
+	}
+	
+.info1{
+	font-size:26px;
+	color:#FFFFFF;
+	}
+	
+.info2{
+	font-size:26px;
+	color:#FFFFFF;
+	line-height:52px;
+	}
+	
+.information{
+	position:absolute;
+	left:10px;
+	top:176px;
+	line-height:180%;
+	}
+	
+.information{
+	line-height:180%;
+	}
+	
+.bianji{
+	position:absolute;
+	left:10px;
+	top:330px;
+	}
+	
+.content3{
+	position:absolute;
+	width:660px;
+	height:619px;
+	left:360px;
+	font-size:30px;
+	color:#FFFFFF;
+	}
+	
+.textBox1{
+	position:relative;
+	width:300px;
+	height:30px;
+	top:-3px;
+	}
+	
+.textBox2{
+	position:relative;
+	width:300px;
+	height:30px;
+	top:-3px;
+	}
+	
+.textBox3{
+	position:relative;
+	width:300px;
+	height:30px;
+	top:-3px;
+	left:26px;
+	}
+	
+.back{
+	position:absolute;
+	left:10px;
+	top:340px;
+	}
+	
+.save{
+	position:absolute;
+	left:307px;
+	top:340px;
+	}
+	
+.c3{
+	left:130px;
+	position:relative;
+	}
+	
+	
+	
+.content2{
+	position:absolute;
+	width:660px;
+	height:619px;
+	left:360px;
+	color:#FFFFFF;
+	}
+	
+.top_bar{
+	position:absolute;
+	top:20px;
+	left:25px;
+	width:580px;
+	height:40px;
+	border-bottom-style:solid;
+	border-width:4px;
+	}
+	
+.l1{
+	position:absolute;
+	top:11px;
+	left:25px;
+	}
+	
+.l2{
+	position:absolute;
+	top:11px;
+	left:100px;
+	}
+	
+.l3{
+	position:absolute;
+	top:11px;
+	left:200px;
+	}
+	
+.block1{
+	position:absolute;
+	width:576px;
+	height:226px;
+	border-style:solid;
+	border-width:2px;
+	left:25px;
+	top:80px;
+	}
+	
+.b_bar{
+	position:absolute;
+	height:24px;
+	width:576px;
+	border-bottom-style:solid;
+	border-width:2px;
+	}
+		
+.b1_l1{
+	position:absolute;
+	top:3px;
+	left:20px;
+	}
+	
+.b1_l2{
+	position:absolute;
+	top:3px;
+	left:140px;
+	}
+	
+.b1_book1{
+	position:relative;
+	top:24px;
+	width:576px;
+	height:60px;
+	}
+	
+.name{
+	position:absolute;
+	left:30px;
+	top:10px;
+	font-size:19px;
+	}
+	
+.author{
+	left:30px;
+	position:absolute;
+	top:33px;
+	}
+	
+.price{
+	position:absolute;
+	top:31px;
+	left:310px;
+	}
+	
+.ammount{
+	position:absolute;
+	top:31px;
+	left:420px;
+	}
+
+.b1_book2{
+	position:relative;
+	top:24px;
+	width:576px;
+	height:60px;
+	}
+	
+.acc{
+	position:absolute;
+	bottom:3px;
+	right:50px;
+	}
+	
+.b1_price{
+	position:relative;
+	left:130px;
+	}
+	
+.block2{
+	position:absolute;
+	width:576px;
+	height:170px;
+	border-style:solid;
+	border-width:2px;
+	left:25px;
+	top:336px;
+	}
+	
+.pages{
+	position:absolute;
+	left:500px;
+	top:530px;
+	}
