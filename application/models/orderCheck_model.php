@@ -23,7 +23,7 @@ class orderCheck_model extends CI_Model {
 	}
 
 	public function getAddress($name){
-		$query = $this->db->query ("SELECT name,address,phone FROM `profile` WHERE name='$name'");
+		$query = $this->db->query ("SELECT name,address,phone FROM `user`,`profile` WHERE `user`.username='$name' and `user`.id=`profile`.id");
 		return $query->result_array();
 	}
 
