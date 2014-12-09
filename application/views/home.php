@@ -22,16 +22,16 @@
         <!-- Outer JS -->
         <script type="text/javascript" src="js/jquery-1.7.1.min.js" ></script>
         <script type="text/javascript">
-        $(document).ready(function() {		
-			$('.logout').click(function(e) {
-				e.preventDefault();
-				thisHref=$(this).attr('href');
-				if(confirm('你要退出登录吗？')) {
-					window.location = thisHref;
-				}
-				
-			});
-		})
+        $(document).ready(function() {      
+            $('.logout').click(function(e) {
+                e.preventDefault();
+                thisHref=$(this).attr('href');
+                if(confirm('你要退出登录吗？')) {
+                    window.location = thisHref;
+                }
+                
+            });
+        })
     </script>
         
     </head>
@@ -145,7 +145,7 @@
                 <span class="md-red-words-chinese">合一书店</span>
                 <div class="row">
                     <div class="col-lg-6 large-book">
-                        <a href="<?=site_url('detail/index') ?>"><img id="book-md-category-1" class="book-style" src="img/book/programming-in-c.png"></a>
+                        <a href="<?=site_url('detail/index') ?>"><img id="book-md-category-1" class="book-style" src="img/book/steve-jobs.png"></a>
                     </div>
                     <div class="col-lg-6 long-book">
                         <a href="<?=site_url('detail/index') ?>"><img id="book-md-category-2" class="book-style" src="img/book/zztj.png"></a>
@@ -204,8 +204,8 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="TextBook">
                     <!-- TextBook -->
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-TextBook-1" class="book-style" src="img/book/new-headway-yellow.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -217,9 +217,9 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-TextBook-4" class="book-style" src="img/book/programming-in-c.png"></a>
                             </div>
-	                    </div>
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-TextBook-5" class="book-style" src="img/book/the-7-habits-of-highly-effective-people.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -231,12 +231,12 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-TextBook-8" class="book-style" src="img/book/straightforward-blue.png"></a>
                             </div>
-	                    </div>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="Literature">
                     <!-- Literature -->
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Literature-1" class="book-style" src="img/book/santi.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -248,9 +248,9 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Literature-4" class="book-style" src="img/book/zztj.png"></a>
                             </div>
-	                    </div>
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Literature-5" class="book-style" src="img/book/steve-jobs.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -262,12 +262,12 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Literature-8" class="book-style" src="img/book/lean-in.png"></a>
                             </div>
-	                    </div>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="Novel">
                     <!-- Novel -->
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Novel-1" class="book-style" src="img/book/harry-potter-and-the-order-of-the-phoenix.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -279,9 +279,9 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Novel-4" class="book-style" src="img/book/the-12-magic-slides.png"></a>
                             </div>
-	                    </div>
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Novel-5" class="book-style" src="img/book/the-feral-child.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -293,12 +293,12 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Novel-8" class="book-style" src="img/book/the-time-machine.png"></a>
                             </div>
-	                    </div>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="Magazine">
                     <!-- Magazine -->
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Magazine-1" class="book-style" src="img/book/new-headway-yellow.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -310,9 +310,9 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Magazine-4" class="book-style" src="img/book/programming-in-c.png"></a>
                             </div>
-	                    </div>
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Magazine-5" class="book-style" src="img/book/the-7-habits-of-highly-effective-people.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -324,12 +324,12 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Magazine-8" class="book-style" src="img/book/straightforward-blue.png"></a>
                             </div>
-	                    </div>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="ToolBook">
                     <!-- ToolBook -->
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-ToolBook-1" class="book-style" src="img/book/new-headway-yellow.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -341,9 +341,9 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-ToolBook-4" class="book-style" src="img/book/programming-in-c.png"></a>
                             </div>
-	                    </div>
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-ToolBook-5" class="book-style" src="img/book/the-7-habits-of-highly-effective-people.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -355,12 +355,12 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-ToolBook-8" class="book-style" src="img/book/straightforward-blue.png"></a>
                             </div>
-	                    </div>
+                        </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="Exam">
                     <!-- Exam -->
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Exam-1" class="book-style" src="img/book/new-headway-yellow.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -372,9 +372,9 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Exam-4" class="book-style" src="img/book/programming-in-c.png"></a>
                             </div>
-	                    </div>
-	                    <div class="row">
-	                        <div class="col-lg-3 small-book">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Exam-5" class="book-style" src="img/book/the-7-habits-of-highly-effective-people.png"></a>
                             </div>
                             <div class="col-lg-3 small-book">
@@ -386,7 +386,7 @@
                             <div class="col-lg-3 small-book">
                                 <a href="#"><img id="Categories-Exam-8" class="book-style" src="img/book/straightforward-blue.png"></a>
                             </div>
-	                    </div>
+                        </div>
                     </div>
                 </div>
             

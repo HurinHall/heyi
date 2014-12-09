@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head>
-        <base href="<?php  echo base_url();?>" />
+    <base href="<?php  echo base_url();?>" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,12 +18,12 @@
             <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
         <!-- Outer CSS -->
-        <link href="css/shoppingCart.css" rel="stylesheet">
-        <link href="css/cart.css" type="text/css" rel="stylesheet">
+        <link href="css/order.css" rel="stylesheet">
+        <link href="css/ordercheck.css" type="text/css" rel="stylesheet">
 
         <!-- Outer JS -->
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js" ></script>
-        <script type="text/javascript">
+        <script src="js/jquery-1.4.min.js" type="text/javascript"></script>
+        <script>
         $(document).ready(function() {    
       $('.logout').click(function(e) {
         e.preventDefault();
@@ -35,7 +35,7 @@
       });
     })
         </script>
-        <script src="js/cart.js" type="text/javascript"></script>
+        <script src="js/ordercheck.js" type="text/javascript"></script>
     </head>
     
     <body>
@@ -51,7 +51,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?=site_url() ?>"><span class="firnav-font-style-chinese">合一</span></a>
+                    <a class="navbar-brand" href="#"><span class="firnav-font-style-chinese">合一</span></a>
                 </div>
         
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -74,9 +74,9 @@
                     </ul>
                     
                     <form class="navbar-form navbar-right" role="search">
-                            <a href="<?=site_url('profile/index')?>" class="btn btn-default red-button-style-long"><?=$username?></a>
-                            <a href="<?=site_url('cart/index')?>" class="btn btn-default red-button-style">购物车</a>
-                            <a href="<?=site_url('login/logout')?>" class="logout btn btn-default red-button-style">退出</a>                     
+                        <button type="submit" class="btn btn-default red-button-style-long"><?=$username?></button>
+                        <a href="<?=site_url('cart/index')?>" class="btn btn-default red-button-style">购物车</a>
+                        <a href="<?=site_url('login/logout')?>" class="logout btn btn-default red-button-style">退出</a>  
                     </form>
                         
                         
@@ -84,88 +84,98 @@
               </div>
             </nav>
             
+        
+
+<?php $orderInfo=$order[0]?>
+	<div id="top">
+		<img src="img/orderCheck/top.jpg">
+	</div>
+	
+	<div id="bar">
+		<div class="top1" style="border-bottom-style:solid; border-width:4px">
+		<img src="img/orderCheck/correct.jpg" class="correct">
+		</div>
+	</div>
+	
+	<div id="content">
+		<div class="order1">
+		<input type="checkbox" name="check1" class="check1">
+			<div class="c1" style="border-style:solid; border-width:3px; ">
+			<img src="<?php echo $orderInfo["pic"] ?>" class="book1" width="88" height="140">
+			<ul>
+				<li class="b1_num">
+				1.
+				</li>
+				<li class="b1_tit">
+				<b>
+				Steve Jobs
+				</b>
+				</li>
+				<li class="b1_author">
+				Marc A. Lappe(作者)
+				</li>
+				<li class="b1_price">
+				￥<?php echo $orderInfo["price"]; ?>
+				</li>
+				<li	class="b1_ammount">
+				数量 ： 1
+				</li>
+			</ul>
+			</div>
+		</div>
+
+
+
+		<div class="add">
+			<div class="toBar">
+				<div class="toOld">
+					<div class="old_left"><div class="old_word1">寄送至</div></div>
+					<div class="old_right"><div class="old_word2">
+					<input type="radio" name="address" value="0" class="radio1">&nbsp;&nbsp;<?php $name = $address[0];echo $name["address"] ?></div></div>
+				</div>
+				<div class="toNew">
+					<div class="new_left"><div class="new_word1">寄送至</div></div>
+					<div class="new_right"><div class="new_word2"><input type="radio" name="address" value="0" class="radio2">&nbsp;&nbsp;
+					
+					<input style="background:transparent;border:1px solid #CCCCCC;width:350px;color:#ffffff;" class="tb" name="tb">
+					
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="info">
+			<div class="acc" style="border-style:solid; border-width:3px; border-color:#999999">
+				<p style="font-size:13px;" class="n">总计： 数量：1  价格：￥<?php echo $orderInfo["price"] ?></p> 
+				<p style="font-size:13px;" class="n2">收件人：<?=$username?><?  echo " ".$name["phone"] ?></p> 
+			</div>
+			
+			<div class="result">
+				<a href="#"><img src="img/orderCheck/cancel.jpg" class="cancel"></a>
+				<a href="#" onclick="CL()"><img src="img/orderCheck/submit.jpg" class="submit"></a>
+        <script type="text/javascript">
+        function CL()
+        {
+           thisHref=$(this).attr('href');
+            if(confirm('下单成功。')) {
+            window.location = thisHref;
+         }
+        }
+
+      </script>
+			</div>
+		</div>
+		</div>
+	
+	</div>
      
-  <div id="bar">
-    <div class="top1" style="border-bottom-style:solid; border-width:4px">
-    <img src="img/cart/cart.jpg" class="cart">
-    <img src="img/cart/all_pro.jpg" class="all">
-    </div>
-  </div>
-  
-  <div id="content">
-    <div class="full_mess">
-    <input type="checkbox" name="check" class="check checkall">
-    <ul >
-      <li class="l1">
-      商品信息
-      </li>
-      <li class="l2">
-      单价
-      </li>
-      <li class="l3">
-      数量
-      </li>
-      <li class="l4">
-      金额
-      </li>
-    </ul>
-    </div>
-    <?php echo form_open('cart/update'); ?>
-    <?php $i = 1; ?>
-    <?php foreach ($this->cart->contents() as $items): ?>
-    <?php echo form_hidden('rowid[]', $items['rowid']); ?>
-    <div class="order1">
-    <input type="checkbox" name="check1" class="check1 checkall">
-      <div class="c1" style="border-style:solid; border-width:3px; ">
-      <img src="img/book/steve-jobs.png" class="book1" width="88" height="140">
-      <ul>
-        <li class="b1_tit">
-        <?php echo $items['name']; ?>
-        </li>
-        <li class="b1_author">
-            <?php if ($this->cart->has_options($items['rowid']) == TRUE): ?>
-                    <?php foreach ($this->cart->product_options($items['rowid']) as $option_name => $option_value): ?>
-                    <strong><?php echo $option_name; ?>:</strong> <?php echo $option_value; ?>        
-                    <?php endforeach; ?>  
-                    <?php endif; ?>
-        </li>
-        <li class="b1_price">
-        <?php echo $this->cart->format_number($items['price']); ?>
-        </li>
-        <li  class="b1_am">
-        ￥<?php echo $this->cart->format_number($items['subtotal']); ?>
-        </li>
-        <div class="add_min">
-        <?php echo form_input(array('name' => 'qty[]', 'value' => $items['qty'], 'maxlength' => '3', 'size' => '5')); ?>
-        </div>
-      </ul>
-      </div>
-    </div>
-    <?php $i++; ?>
-        <?php endforeach; ?>
-    
-    
-    
-    <div class="info">
-        <p style="font-size:22px;" class="n">合计 ：<font color="#890018">￥ <?php echo $this->cart->format_number($this->cart->total()); ?></font></p> 
-      <div class="result">
-        <a href="#"><img src="img/cart/back.jpg" class="back"></a>
         
-        <a href="<?=site_url('cart/empty_cart')?>"><img src="img/cart/delete.jpg" class="delete"></a>
-        <input type="submit" class="submit" value="                      " style="background:url(img/cart/submit_correct.jpg)" width="100" />
-        
-        
-      </div>
-    </div>
-    </div>
-    <?php echo form_close(); ?>
-  
-  </div>       
             
             
-                        
-     <div id="buttom">       
           
+                        
+            
+ <div id="buttom">       
      <nav class="navbar" role="navigation">       
       <footer class="bs-docs-footer" role="contentinfo">
         <div class="row">   
@@ -214,15 +224,15 @@
            </ul>
        </div>
     </nav>
-    
-     </div>
             
             
             
             
-     </div>
+            
+        </div>
      <div id="third-nav-bg"></div>
      <div id="fourth-nav-bg"></div> 
+ </div>
         <!-- End of Components -->
     
         
